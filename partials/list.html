@@ -1,0 +1,30 @@
+<div id="list-page">
+    <div class="container">
+        <div class="post-list">
+            <div class="row">
+                <div id="post-list">
+                    <div class="col-xs-12 post-entry" data-ng-repeat="photo in feedList.photos track by photo.url">
+                        <div class="post-thumb-container">
+                            <div class="post-thumb" ng-style="{'background-image': 'url({{photo.url}})'}"></div>
+                        </div>
+                        <div class="post-content">
+                            <h1 class="post-title truncate">
+                                {{photo.title}}
+                            </h1>
+                            <div class="post-details">
+                                <div class="container-fluid">
+                                    <div class="row no-gutter">
+                                        <span class="post-date"><span class="hidden-sm-down">Published: </span>{{photo.date}}</span>
+                                        <span class="post-link">
+                                            <a ng-href="{{photo.url}}" target="_blank">View on Flickr</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

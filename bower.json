@@ -1,0 +1,22 @@
+{
+  "name": "inphonex-question02",
+  "authors": [],
+  "description": "",
+  "private": true,
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.1.4"
+  },
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

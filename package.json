@@ -1,0 +1,19 @@
+{
+  "name": "frontend-recruiting-test-question02",
+  "version": "1.0.0",
+  "description": "## First Question As a customer I need an application to manage a TO DO LIST. It should be able to deal with these four basic operations: 1. create 2. get (list and specific item) 3. update 4. delete",
+  "main": "application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git-local.inphonex.com:development/Front-End-Recruiting-Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
