@@ -1,0 +1,28 @@
+/frontend/node_modules/*
+
+# Ignore Node files
+node_modules/**
+bower_components/**
+
+# Ignore Visual Studio files
+*.suo
+*.sln
+*.dat
+*.njsproj
+
+# Ignore webstorm files
+.idea
+*.iml
+
+# Ignore OS X files
+*.DS_Store
+
+# Ignore log files
+npm-debug.log
+
+package-version
+
+
+# Ignore all logfiles and tempfiles.
+*/log/*.log
+*/tmp
