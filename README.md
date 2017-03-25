@@ -26,7 +26,7 @@ Um simples gerenciador de tarefas baseado no Google Keep, porém ele trabalha co
   - Implantar sincronizar com banco de dados NoSQL quando tiver conexão com internet
   
 ## Estrutura
--assets
+- assets
 	- css
 		- app.css
 		- common.css
@@ -64,6 +64,7 @@ Um simples gerenciador de tarefas baseado no Google Keep, porém ele trabalha co
 		- list.html
 		- nav-left.html
 		- section.html
+
 - .gitignore
 - README.md
 - app.css
