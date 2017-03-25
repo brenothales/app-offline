@@ -21,9 +21,9 @@ Um simples gerenciador de tarefas baseado no Google Keep, porém ele trabalha co
     - gulp && gulp serve  
   
 # Implementações Futuras
-  - Criar e melhoras mais filtros 
-  - Melhorar o crud principalmente na parte de editar
-  - Implantar sincronizar com banco de dados NoSQL quando tiver conexão com internet
+- Criar e melhoras mais filtros 
+- Melhorar o crud principalmente na parte de editar
+- Implantar sincronizar com banco de dados NoSQL quando tiver conexão com internet
   
 ## Estrutura
 - assets
