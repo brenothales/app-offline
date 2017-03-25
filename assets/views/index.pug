@@ -1,0 +1,15 @@
+doctype html
+html(lang='en', ng-app="todo")
+    head
+        meta(charset='UTF-8')
+        title Desafio
+        link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
+        link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
+        link(href='app.css', rel='stylesheet', type='text/css')
+        script(src='app.js')
+    body(ng-controller='TodoCtrl', ng-init='init()')
+      block content
+        include partials/header
+        include partials/section
+      

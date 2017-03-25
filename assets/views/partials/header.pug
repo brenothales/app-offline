@@ -1,0 +1,16 @@
+.menu-wrapper.inbox
+  .left-container
+    a.back(href='#')
+      i.fa.fa-arrow-left
+    label.menu-toggle-icon
+      input(type='checkbox')
+      span.icon-bar(href='#')
+      span.icon-bar(href='#')
+      span.icon-bar(href='#')
+    a.logo(href='#') Ideia
+  .right-container
+    nav.menus
+  .center-container
+    .search-wrapper
+      .search-box
+        input(ng-model='newTodo', ng-enter='', type='text', placeholder='Add ideia Search your ideia, task offline and more', name='')

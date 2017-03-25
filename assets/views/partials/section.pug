@@ -1,0 +1,45 @@
+.body-wrapper
+  articel.search-result.search-hide
+  include nav-left
+  section
+    article.wrapper(style='display: block;')
+      .header
+        .time Today
+        .action
+          button
+            i.fa.fa-check.fa-lg
+      ul(ng-repeat='todos in model track by $index', ui-sortable='todoSortable', ng-model='todos.list', ng-show='$index === currentShow')
+        li(ng-repeat='todo in todos.list | filter:showFn | filter :newTodo ', style='display: block;')
+          //- Inicio conteúdo
+          .mail-wrapper(style='display: none;')
+            .mail-top.shadow
+              .mail-subject {{ todo.taskName }} 
+              .mail-action 
+            .mail-body
+              .image
+              .someClass
+                .message
+                  | Your tasks is: {{ todo.taskName }} being in the status : {{ todo.isDone }} was created on the date: {{ todo.date_created }} and in the type of browser: {{ todo.type }}
+            .mail-footer.shadow
+            
+          
+          //- FIm 
+
+          //- Inicio Listagem
+          .content-wrapper(style='display: block;')
+            .actions
+              .chk-pin
+                a(href='#') 
+                  label
+                    input.todoCheckbox(ng-model='todo.isDone', type='checkbox')
+                    span  
+            .subject
+              include actions
+              .content
+                label.todoCheckboxlabel
+                edit-in-place(value='todo.taskName')
+                //- span  - 
+                //- span.sn Here are some of the jobs that you can apply for
+        
+          //- Fim
+        

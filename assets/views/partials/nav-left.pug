@@ -1,0 +1,37 @@
+nav.sidebar.hide.show
+    ul
+      li(ng-class="{'active' : show == 'All' }", ng-click="show='All'")
+        a.inbox(href='#')
+          i.fa.fa-thumb-tack.fa-lg.color-blue
+          span All
+      li(ng-class="{'active' : show == 'Incomplete' }", ng-click="show='Incomplete'")
+        a.snooz(href='#')
+          i.fa.fa-exclamation-circle.color-amber
+          span Incomplete
+      li(ng-class="{'active' : show == 'Complete' }", ng-click="show='Complete'")
+        a.done(href='#')
+          i.fa.fa-check.fa-lg.color-green
+          span Complete
+      //- li
+      //-   a.done(href='#')
+      //-     i.fa.fa-check.fa-lg.color-green
+      //-     span Done
+      //- li
+      //-   a(href='#')
+      //-     i.fa.fa-trash.fa-lg
+      //-     span Trash
+//- nav.sidebar.hide
+//-   ul(ng-repeat='todos in model')
+//-     li(ng-class="{'active' : show == 'All' }", ng-click="show='All'")
+//-       a(href='#') 
+//-         i.fa.fa-list-alt(aria-hidden='true').color-blue
+//-         span All {{todos.list.length}}
+//-     li(ng-class="{'active' : show == 'Incomplete' }", ng-click="show='Incomplete'")
+//-       a(href='#')
+//-         i.fa.fa-exclamation-circle(aria-hidden='true').red
+//-         span Incomplete {{model.list.isDone.length}}
+  
+//-     li(ng-class="{'active' : show == 'Complete' }", ng-click="show='Complete'")
+//-       a(href='#')
+//-         i.fa.fa-check.fa-lg.color-green
+//-         span Done

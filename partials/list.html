@@ -1,30 +1,9 @@
-<div id="list-page">
-    <div class="container">
-        <div class="post-list">
-            <div class="row">
-                <div id="post-list">
-                    <div class="col-xs-12 post-entry" data-ng-repeat="photo in feedList.photos track by photo.url">
-                        <div class="post-thumb-container">
-                            <div class="post-thumb" ng-style="{'background-image': 'url({{photo.url}})'}"></div>
-                        </div>
-                        <div class="post-content">
-                            <h1 class="post-title truncate">
-                                {{photo.title}}
-                            </h1>
-                            <div class="post-details">
-                                <div class="container-fluid">
-                                    <div class="row no-gutter">
-                                        <span class="post-date"><span class="hidden-sm-down">Published: </span>{{photo.date}}</span>
-                                        <span class="post-link">
-                                            <a ng-href="{{photo.url}}" target="_blank">View on Flickr</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<body ng-controller="TodoCtrl" ng-init="init()"><!-- The Common Navigation Navbar--><div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container"><div class="navbar-header"><button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Angular-js TodoList</a></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a target="_blank" title="Angular js Tutorial" href="http://blog.jaykanakiya.com/angular-js-todo-list-sortable/">Go back to Tutorial</a></li><li><a href="http://blog.jaykanakiya.com/contact/" title="Contact Jay Kanakiya">Contact Me</a></li><li><a href="https://github.com/kanakiyajay/Angular-js-todolist/" title="Github angular js">Github Link</a></li><li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Other Links <b class="caret"></b></a><ul class="dropdown-menu"><li><a title="jQuery plugins" href="http://jquer.in/" target="_blank">A jQuery plugin a Day</a></li><li class="active"><a title="Tutorial" href="https://github.com/kanakiyajay/Angular-js-todolist/" target="_blank">Angular-js TodoList</a></li><li><a title="Twitter" href="https://twitter.com/techiejayk" target="_blank">@techiejayk</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Share <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://twitter.com/intent/tweet?url=http://jaykanakiya.com/demos/angular-js-todolist/&amp;text=Massive Angular-js-Todo-List-Tutorial&amp;via=techiejayk">Twitter</a></li><li><a href="https://facebook.com/sharer.php?u=http://jaykanakiya.com/demos/angular-js-todolist/">Facebook</a></li><li><a href="https://plus.google.com/share?url=http://jaykanakiya.com/demos/angular-js-todolist/">Google+</a></li></ul></li></ul></div><!-- /.nav-collapse--></div></div><div class="container" id="playground" ng-controller="TodoCtrl"><div class="row"><div class="col-xs-3"><div class="list-group"><a class="list-group-item" href="#" ng-repeat="todos in model" ng-class="{'active' : currentShow === $index}" ng-click="changeTodo($index)"><span class="badge">{{todos.list.length}}</span>					{{todos.name}}</a></div></div><div class="col-xs-6"><div class="row"><div class="col-xs-7"><div class="input-group"><span class="input-group-btn"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button></span><input class="form-control" type="search" placeholder="Search" ng-model="todoSearch"/></div></div><div class="col-xs-5"><ul class="nav nav-pills todo-filter"><li ng-class="{'active' : show == 'All' }" ng-click="show='All'"><a href="#">All</a></li><li ng-class="{'active' : show == 'Incomplete' }" ng-click="show='Incomplete'"><a href="#">Incomplete</a></li><li ng-class="{'active' : show == 'Complete' }" ng-click="show='Complete'"><a href="#">Complete</a></li></ul></div></div><div class="row" id="todoAdd"><div class="form-group"><input class="todoField" id="newTodoField" type="text" ng-model="newTodo" placeholder="Add New Todo" ng-enter=""/><button class="btn btn-default" id="todoSubmit" ng-click="addTodo()">Add</button></div></div><div class="row"><ul class="list-unstyled" ng-repeat="todos in model track by $index" ui-sortable="todoSortable" ng-model="todos.list" ng-show="$index === currentShow"><li class="todoTask" ng-repeat="todo in todos.list | filter:showFn | filter :todoSearch "><input class="todoCheckbox" ng-model="todo.isDone" type="checkbox"/><label class="todoCheckboxlabel"></label><edit-in-place value="todo.taskName"></edit-in-place><button class="close pull-right" type="button" aria-hidden="true" ng-click="deleteTodo(todo)">×</button></li></ul></div></div></div><div class="row"><div class="debug"><p class="text-info">{{ model | json}}</p></div></div></div><script type="text/javascript" async="">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33060097-3']);
+_gaq.push(['_setDomainName', 'jaykanakiya.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body>
